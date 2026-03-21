@@ -1,4 +1,4 @@
-const BASE = "/api";  // Vite proxies this to http://localhost:8000
+const BASE = "https://fraud-shield-backend.onrender.com";
 
 export async function scanMessage(message) {
   const res = await fetch(`${BASE}/scan`, {
