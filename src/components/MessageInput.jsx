@@ -31,7 +31,7 @@ export function MessageInput({ onScan, loading }) {
     <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 
       {/* Demo buttons */}
-      <div>
+      {/*<div>
         <p style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--muted)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "8px" }}>
           Load demo message
         </p>
@@ -43,7 +43,7 @@ export function MessageInput({ onScan, loading }) {
             </button>
           ))}
         </div>
-      </div>
+      </div>*/}
 
       {/* Textarea */}
       <div style={{ position: "relative" }}>
