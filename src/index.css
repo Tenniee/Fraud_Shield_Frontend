@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:            #080b12;
+  --surface:       #111827;
+  --surface2:      #1a2236;
+  --border:        #1f2d45;
+  --border2:       #2a3a55;
+  --text:          #e2e8f4;
+  --muted:         #64748b;
+  --accent:        #0ea5e9;
+  --high:          #f43f5e;
+  --high-bg:       rgba(244,63,94,0.08);
+  --high-border:   rgba(244,63,94,0.25);
+  --medium:        #fb923c;
+  --medium-bg:     rgba(251,146,60,0.08);
+  --medium-border: rgba(251,146,60,0.25);
+  --low:           #34d399;
+  --low-bg:        rgba(52,211,153,0.08);
+  --low-border:    rgba(52,211,153,0.25);
+  --font-ui:       'DM Sans', sans-serif;
+  --font-mono:     'Space Mono', monospace;
+  --radius:        12px;
+  --radius-sm:     8px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.65;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(14,165,233,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,165,233,0.025) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root { position: relative; z-index: 1; }
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all 0.18s ease;
+}
+button:hover:not(:disabled) { transform: translateY(-1px); filter: brightness(1.12); }
+button:active:not(:disabled) { transform: translateY(0) scale(0.98); }
+button:disabled { opacity: 0.35; cursor: not-allowed; }
+
+kbd {
+  padding: 2px 7px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+@keyframes spin   { to { transform: rotate(360deg); } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes pulse  { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
