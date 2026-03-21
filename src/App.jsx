@@ -50,7 +50,7 @@ export default function App() {
           </p>
 
           {/* Backend status pill */}
-          <BackendPill status={backendOk} />
+          {/*<BackendPill status={backendOk} />*/}
         </header>
 
         <MessageInput onScan={handleScan} loading={loading} />
